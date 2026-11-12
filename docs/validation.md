@@ -1,23 +1,28 @@
-# Validation status
+# Engineering checks and measurement procedure
 
-Snapshot reviewed on **November 11, 2026** using KiCad **10.0.3**. These checks describe the repository snapshot; they are not a fabrication approval or physical test result.
+The repository records KiCad **10.0.3** electrical-rule and PCB design-rule checks performed on **November 11, 2026**.
 
-## Schematic and PCB checks
+## Recorded design checks
 
-| Check | Main/audio board | Charging/power board |
+| Check | Main audio board | Charging and power board |
 | --- | --- | --- |
-| Schematic ERC | 0 reported errors or warnings | 0 reported errors or warnings |
-| PCB layout-rule findings | 4 warnings | 0 reported layout violations |
-| PCB unconnected-item findings | 6 errors | 0 |
+| Schematic ERC findings | 0 | 0 |
+| PCB layout-rule findings | 4 warnings | 0 |
+| PCB connectivity findings | 6 errors | 0 |
 | PCB/schematic parity findings | 0 | 3 warnings |
 
-Main-board warnings concern a dangling track, silkscreen edge clearance, a library footprint mismatch, and silkscreen over copper. The unconnected-item errors include ground-zone connectivity and must be reviewed before release. The power-board parity warnings concern the D1/D2/D3 footprint values differing from the schematic LED values.
+The reports capture the project check configuration, severity levels, affected items and coordinates. PCB checks use the saved copper-zone fills. The `ignored_checks` field records rule categories excluded by the project configuration.
 
-Full reports: [main ERC](checks/main-erc.json), [main DRC](checks/main-drc.json), [power ERC](checks/power-erc.json), and [power DRC](checks/power-drc.json).
+### Full reports
 
-The reports use the projects' current severity configuration. Several rule categories are ignored in the project configuration; see `ignored_checks` in the DRC reports. Checks were run against the saved zone fills without refilling or modifying the board. Zero reported findings therefore means only that the enabled checks found none in that saved state.
+- [Main audio board: schematic ERC](checks/main-erc.json)
+- [Main audio board: PCB DRC](checks/main-drc.json)
+- [Charging and power board: schematic ERC](checks/power-erc.json)
+- [Charging and power board: PCB DRC](checks/power-drc.json)
 
-Commands used, with paths relative to the repository root:
+### Reproduce the checks
+
+Run these commands from the repository root:
 
 ```sh
 kicad-cli sch erc --format json -o docs/checks/main-erc.json "hardware/main/Bluetooth Headphones Project.kicad_sch"
@@ -26,30 +31,24 @@ kicad-cli sch erc --format json -o docs/checks/power-erc.json "hardware/power/Ch
 kicad-cli pcb drc --schematic-parity --format json -o docs/checks/power-drc.json "hardware/power/Charging and Power.kicad_pcb"
 ```
 
-## Simulation evidence
+## Simulation workflow
 
-LTspice source and simplified models are included. A completed run is evidenced by the original project log and waveform files. Earlier project notes also report AC and transient work. Quantitative results and selected plots have not been reverified for this portfolio snapshot, so no measured or simulated performance figure is presented as a validated result.
+The LTspice circuit provides parameterized transient and AC analysis of stereo audio coupling and voltage gain. The [simulation guide](../simulation/README.md) defines the source signals, input resistance, gain, loads and analysis directives.
 
-See [simulation instructions and limits](../simulation/README.md).
+## Bench measurement procedure
 
-## Firmware evidence
+This procedure defines the measurements and evidence to collect for assembled-board evaluation.
 
-The CubeMX `.ioc` file is present. No application source, successful build, flashing record or hardware execution result is included.
-
-## Physical test plan
-
-Testing awaits the first assembled project PCBs. The following measurements remain planned:
-
-| Test | Evidence to record |
+| Measurement | Record |
 | --- | --- |
-| Power bring-up | Supply current, rail voltages, polarity, shorts and temperature |
-| Controller bring-up | Programming connection, clock/reset behavior and button inputs |
+| Power rails | Supply current, rail voltages, polarity and temperature |
+| Controller operation | Programming connection, clock/reset behavior and button inputs |
 | Control interfaces | BM83 communication and amplifier I2C transactions |
-| Audio gain | Input/output voltage and gain at stated frequencies and settings |
+| Audio gain | Input/output voltage, frequency and control setting |
 | DC offset | Output DC voltage with approximately 38 ohm dummy loads |
-| Clipping | Output waveform versus input level and battery voltage |
+| Clipping | Output waveform versus input level and supply voltage |
 | Startup/shutdown | Output transients and mute sequencing |
-| Stability | Oscilloscope traces under the intended load conditions |
-| Battery/runtime | Verified cell specifications, charge behavior and operating current |
+| Stability | Oscilloscope traces under specified load conditions |
+| Battery operation | Cell specifications, charge behavior and operating current |
 
-Record instrument settings, load, supply voltage, firmware revision and test conditions alongside every result. Update this page when measurements exist.
+Record instrument settings, load, supply voltage and firmware revision alongside each measurement.

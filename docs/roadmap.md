@@ -1,30 +1,26 @@
-# Roadmap
+# Project file guide
 
-## Present in this snapshot
+## Hardware design
 
-- [x] Main/audio and charging/power KiCad projects.
-- [x] Local custom symbol and footprint libraries.
-- [x] STM32CubeMX configuration.
-- [x] LTspice audio approximation and reproducibility instructions.
-- [x] Browser-readable design previews and project documentation.
+| Deliverable | Location |
+| --- | --- |
+| Main audio PCB and KiCad project | [hardware/main](../hardware/main/) |
+| Charging and power PCB and KiCad project | [hardware/power](../hardware/power/) |
+| Audio and controller circuit diagrams | [Main schematic previews](schematics/main/) |
+| Charging and regulation circuit diagram | [Power schematic preview](schematics/power/Charging%20and%20Power.svg) |
+| Main board component list | [Main audio BOM](../hardware/main/bom.csv) |
+| Power board component list | [Power BOM](../hardware/power/bom.csv) |
 
-## Before fabrication
+## Configuration and analysis
 
-- [ ] Resolve or document remaining ERC/DRC findings.
-- [ ] Complete connectivity, routing, return-path and RF keepout review.
-- [ ] Verify all part selections, footprints and the purchasing BOM.
-- [ ] Confirm battery specifications, charge settings, protection and thermal limits.
-- [ ] Verify board-to-board pinout and connector polarity.
-- [ ] Implement firmware and define the programming/debug interface.
-- [ ] Publish selected simulation plots with reproducible parameters.
-- [ ] Review a final fabrication package and tag the approved design revision.
+- [STM32 pin and peripheral configuration](../firmware/)
+- [LTspice stereo audio simulation](../simulation/)
+- [Recorded schematic and PCB checks](validation.md)
+- [Bench measurement procedure](validation.md#bench-measurement-procedure)
 
-## After assembly
+## Design documentation
 
-- [ ] Bring up power rails with a current-limited supply.
-- [ ] Verify MCU programming, control interfaces and startup sequencing.
-- [ ] Test the amplifier with approximately 38 ohm dummy loads.
-- [ ] Measure gain, DC offset, clipping, startup transients and stability.
-- [ ] Measure power consumption and battery runtime under stated conditions.
-- [ ] Document Bluetooth operation, physical assembly and acoustic evaluation.
-- [ ] Add prototype photographs, measured plots and a demonstration.
+- [System architecture and design decisions](design.md)
+- [Software and setup instructions](getting-started.md)
+- [Board layout images](images/)
+- [Component documentation and references](references.md)
