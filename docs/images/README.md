@@ -1,13 +1,15 @@
-# PCB layout previews
+# PCB layout images
 
-Front copper, front silkscreen and board outline exported from the saved KiCad boards. Internal and back copper layers are available in the native PCB files and are not visible in these front-layer previews.
+These previews show front copper, front silkscreen and the board outline. Open the linked native PCB file in KiCad to inspect every copper layer and board setting.
 
-## Main/audio board — work in progress
+## Main audio PCB
 
-![Main board front-layer layout](main-board.svg)
+![Main audio PCB layout](main-board.svg)
 
-## Charging/power board — work in progress
+[Open the main audio board files](../../hardware/main/) · [Editable PCB layout](../../hardware/main/Bluetooth%20Headphones%20Project.kicad_pcb)
 
-![Power board front-layer layout](power-board.svg)
+## Charging and power PCB
 
-See the [validation status](../validation.md) before interpreting these layouts as complete designs.
+![Charging and power PCB layout](power-board.svg)
+
+[Open the charging and power board files](../../hardware/power/) · [Editable PCB layout](../../hardware/power/Charging%20and%20Power.kicad_pcb)
