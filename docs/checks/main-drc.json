@@ -1,0 +1,252 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-11T22:22:42",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.3",
+    "schematic_parity": [],
+    "source": "Bluetooth Headphones Project.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 1",
+                    "pos": {
+                        "x": 112.042,
+                        "y": 140.4316
+                    },
+                    "uuid": "11fb2a8c-6c96-4548-9c46-209865676734"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 2",
+                    "pos": {
+                        "x": 112.3696,
+                        "y": 142.494
+                    },
+                    "uuid": "881f5491-621f-4f8a-a7eb-d44770e56ac6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'GND ' [GND] on In2.Cu, priority 1",
+                    "pos": {
+                        "x": 80.3148,
+                        "y": 132.334
+                    },
+                    "uuid": "660fdfd1-2f4c-4adb-a69e-d358cde32b3b"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 2",
+                    "pos": {
+                        "x": 112.3696,
+                        "y": 142.494
+                    },
+                    "uuid": "881f5491-621f-4f8a-a7eb-d44770e56ac6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'GND ' [GND] on In2.Cu, priority 1",
+                    "pos": {
+                        "x": 80.3148,
+                        "y": 132.334
+                    },
+                    "uuid": "660fdfd1-2f4c-4adb-a69e-d358cde32b3b"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 5",
+                    "pos": {
+                        "x": 120.3452,
+                        "y": 147.8788
+                    },
+                    "uuid": "7ffed66d-17f6-4050-a773-26a12ac92c4c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 129.667,
+                        "y": 135.382
+                    },
+                    "uuid": "02230150-6ed4-41ce-8c1d-8ecebf68f0d6"
+                },
+                {
+                    "description": "Pad 57 [GND] of U3 on F.Cu",
+                    "pos": {
+                        "x": 136.8672,
+                        "y": 133.6981
+                    },
+                    "uuid": "f712c628-0061-4b93-a160-8ba966165c29"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 57 [GND] of U3 on F.Cu",
+                    "pos": {
+                        "x": 136.8672,
+                        "y": 133.6981
+                    },
+                    "uuid": "f712c628-0061-4b93-a160-8ba966165c29"
+                },
+                {
+                    "description": "Pad 50 [GND] of U3 on F.Cu",
+                    "pos": {
+                        "x": 147.4072,
+                        "y": 133.3781
+                    },
+                    "uuid": "6435e03b-f00c-4e30-a6d8-1aa9a8299eab"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 56 [GND] of U3 on F.Cu",
+                    "pos": {
+                        "x": 144.9272,
+                        "y": 143.8081
+                    },
+                    "uuid": "3dac0fc1-c893-466b-845f-b20b30362895"
+                },
+                {
+                    "description": "Pad 50 [GND] of U3 on F.Cu",
+                    "pos": {
+                        "x": 147.4072,
+                        "y": 133.3781
+                    },
+                    "uuid": "6435e03b-f00c-4e30-a6d8-1aa9a8299eab"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [BT_WAKE] on F.Cu, length 0.2525 mm",
+                    "pos": {
+                        "x": 141.631151,
+                        "y": 155.752049
+                    },
+                    "uuid": "8ae2515a-bcd5-432f-862a-2689406b62b3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "items": [
+                {
+                    "description": "Segment on Edge.Cuts",
+                    "pos": {
+                        "x": 80.316,
+                        "y": 132.334
+                    },
+                    "uuid": "f0fcffa1-20eb-4be4-9bb2-382c599c0b3e"
+                },
+                {
+                    "description": "Polygon of U3 on F.Silkscreen",
+                    "pos": {
+                        "x": 132.3572,
+                        "y": 132.7781
+                    },
+                    "uuid": "1b9983e2-af56-4d04-aa96-3c5a55b601f7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_edge_clearance"
+        },
+        {
+            "description": "Footprint 'Microchip_BM83' does not match copy in library 'RF_Module'",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 140.1572,
+                        "y": 138.2781
+                    },
+                    "uuid": "079e8377-155f-4981-a3e1-cc1b4489532a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Footprint text of U4 (U4)",
+                    "pos": {
+                        "x": 119.8372,
+                        "y": 140.8988
+                    },
+                    "uuid": "e9b5384e-1d33-45b6-a070-4a5eda04a90d"
+                },
+                {
+                    "description": "Pad 21 [GND] of U4 on F.Cu",
+                    "pos": {
+                        "x": 119.8372,
+                        "y": 140.8988
+                    },
+                    "uuid": "0d1f9e7d-2545-439d-b063-ede0c701b63b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

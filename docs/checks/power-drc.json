@@ -1,0 +1,82 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-11T22:22:49",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.3",
+    "schematic_parity": [
+        {
+            "description": "Value (D1) doesn't match symbol value (Yellow)",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 117.0625,
+                        "y": 94.0
+                    },
+                    "uuid": "7ad05463-ba1c-494f-b5e0-d398c9de1365"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (D2) doesn't match symbol value ( Green)",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 121.625,
+                        "y": 93.7
+                    },
+                    "uuid": "9d36ce02-e917-434a-8081-05447ee4cdba"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Value (D3) doesn't match symbol value (Red)",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 126.8625,
+                        "y": 93.9
+                    },
+                    "uuid": "238678dd-8460-4df6-8f1f-44dc1824474c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        }
+    ],
+    "source": "Charging and Power.kicad_pcb",
+    "unconnected_items": [],
+    "violations": []
+}
