@@ -1,0 +1,10 @@
+* text=auto
+*.md text eol=lf
+*.svg text eol=lf
+*.csv text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_pcb text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_sym text eol=lf
+*.step binary
+*.png binary
