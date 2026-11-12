@@ -1,0 +1,20 @@
+Reference,Value,Footprint,Datasheet,Status
+C1,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
+C2,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
+C3,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
+C4,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
+D1,LED Yellow,LED_SMD:LED_0805_2012Metric,,Schematic-derived; verify before purchasing
+D2,LED Green,LED_SMD:LED_0805_2012Metric,,Schematic-derived; verify before purchasing
+D3,LED Red,LED_SMD:LED_0805_2012Metric,,Schematic-derived; verify before purchasing
+J2,Battery rail,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,,Schematic-derived; verify before purchasing
+J3,USB-C 5V IN,Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x_6P_TopMnt_Horizontal,,Schematic-derived; verify before purchasing
+J6,To Main PCB,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,,Schematic-derived; verify before purchasing
+R1,470,Resistor_SMD:R_0805_2012Metric,,Schematic-derived; verify before purchasing
+R2,470,Resistor_SMD:R_0805_2012Metric,,Schematic-derived; verify before purchasing
+R3,470,Resistor_SMD:R_0805_2012Metric,,Schematic-derived; verify before purchasing
+R4,12.7k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
+R8,5.1k,Resistor_SMD:R_0805_2012Metric,,Schematic-derived; verify before purchasing
+R9,5.1k,Resistor_SMD:R_0805_2012Metric,,Schematic-derived; verify before purchasing
+TH1,10k NTC,Connector_Wire:SolderWire-0.1sqmm_1x02_P3.6mm_D0.4mm_OD1mm,,Schematic-derived; verify before purchasing
+U1,TPS7A2030PDBVR,TPS7A2030PDBVR:SOT95P280X145-5N,,Schematic-derived; verify before purchasing
+U2,MCP73833-AMI_UN,MCP73833-AMI_UN:SOP50P490X110-10N,,Schematic-derived; verify before purchasing
