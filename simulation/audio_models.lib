@@ -1,4 +1,4 @@
-* Educational audio-path approximations; NOT manufacturer device models.
+* Educational analog-network models: ideal sources and differential voltage gain.
 * BM83: ideal analog DAC outputs only. Bias/amplitude are adjustable assumptions.
 .subckt BM83_AUDIO_APPROX AOHPL AOHPR GND
 VL AOHPL GND SINE({VBIAS} {VSIG} {FTEST}) AC 1
@@ -6,12 +6,12 @@ VR AOHPR GND SINE({VBIAS} {VSIG} {FTEST}) AC 1
 .ends BM83_AUDIO_APPROX
 
 * TPA6130A2: differential input resistance and ideal voltage gain only.
-* No clipping, bandwidth, noise, distortion, I2C, startup or charge-pump model.
-* VDD is exposed for documentation/decoupling, but does not power this ideal model.
+* Model scope: input resistance, AC coupling and ideal differential voltage gain.
+* VDD is a schematic reference; controlled sources define the ideal model output.
 .subckt TPA6130A2_AUDIO_APPROX INML INPL INMR INPR HPLEFT HPRIGHT VDD GND
 RLIN INPL INML {RINPUT}
 RRIN INPR INMR {RINPUT}
-* Numerical DC references for the AC-coupled ideal inputs; not real bias circuitry.
+* High-value resistors establish numerical DC references for AC-coupled inputs.
 RBLP INPL GND 1G
 RBLM INML GND 1G
 RBRP INPR GND 1G
