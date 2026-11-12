@@ -1,10 +1,9 @@
-* text=auto
-*.md text eol=lf
-*.svg text eol=lf
-*.csv text eol=lf
-*.kicad_sch text eol=lf
-*.kicad_pcb text eol=lf
-*.kicad_mod text eol=lf
-*.kicad_sym text eol=lf
+# Preserve line endings in this imported CAD and documentation snapshot.
+# This keeps a fresh clone clean on Windows, macOS and Linux.
+* -text
 *.step binary
 *.png binary
+# LTspice files are not Adventure Game Studio source code.
+simulation/*.asy linguist-detectable=false
+simulation/*.asc linguist-detectable=false
+simulation/*.lib linguist-detectable=false
