@@ -1,15 +1,15 @@
-# STM32 configuration
+# STM32 controller configuration
 
-`Firmware.ioc` is the STM32CubeMX configuration for the STM32U031C8T6 controller. It captures pin and peripheral selections for the headphone control system.
+[Firmware.ioc](Firmware.ioc) captures the STM32CubeMX configuration for the **STM32U031C8T6** headphone controller.
 
-## Current status
+## Explore the configuration
 
-This folder contains the configuration only. Application source, a build system, a flashing procedure, and a working binary have not been supplied in the current project files. Opening the configuration does not demonstrate successful firmware execution.
+1. Open `Firmware.ioc` in STM32CubeMX.
+2. Inspect the controller pin assignments and configured peripherals.
+3. Cross-reference the [MCU and button schematic](../hardware/main/MCU_Buttons.kicad_sch) to follow the hardware connections.
 
-## Planned implementation
+## Related design files
 
-- Generate and review the STM32 project.
-- Implement button handling and the required BM83 control behavior.
-- Implement and verify amplifier control over I2C.
-- Define reset, startup, mute and power-state sequencing.
-- Verify behavior on the assembled hardware and record the toolchain and test procedure.
+- [Controller schematic preview](../docs/schematics/main/Bluetooth%20Headphones%20Project-MCU_and_Buttons.svg)
+- [Main audio board project](../hardware/main/)
+- [System architecture](../docs/design.md)
