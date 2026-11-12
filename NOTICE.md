@@ -1,9 +1,7 @@
-# Reuse and third-party notice
+# Project ownership and reuse
 
-Project owner: Jonathan Molla.
+Project owner: **Jonathan Molla**.
 
-No open-source license has been selected for the original project material in this repository. Public visibility is for portfolio review and does not itself grant a general license to reuse, manufacture, or redistribute the design. Contact the project owner through the GitHub profile for reuse questions.
+The repository presents the headphone electronics design and its supporting documentation for portfolio review. Contact the project owner through the [GitHub profile](https://github.com/jonathanmolla) for permission to reuse, manufacture or redistribute the original design material.
 
-Third-party CAD assets and standard library references retain their respective authorship and terms. See `docs/references.md`. Manufacturer datasheets are linked, not included.
-
-The project is an unfinished engineering design, not a validated production release. Consult the documented design-check status and model limitations when evaluating it.
+Third-party CAD assets and standard library material retain their respective authorship and licensing terms. See [component documentation and references](docs/references.md).

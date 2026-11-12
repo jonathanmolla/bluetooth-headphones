@@ -1,10 +1,8 @@
 # Bluetooth Headphones
 
-An ongoing electronics project by **Jonathan Molla** to develop custom Bluetooth headphones, covering circuit design, PCB layout, STM32 control configuration, and audio-path simulation.
+Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together stereo audio circuit design, PCB layout, battery charging, STM32 controller configuration, and LTspice simulation.
 
-**Status: design and simulation stage.** This repository documents a work in progress. The PCB files are not a manufacturing release, and assembled-hardware performance has not been verified. The firmware folder currently contains an STM32CubeMX configuration, not a working firmware application.
-
-![Main PCB layout — work in progress](docs/images/main-board.svg)
+![Main audio PCB layout](docs/images/main-board.svg)
 
 ## Project at a glance
 
@@ -18,14 +16,20 @@ An ongoing electronics project by **Jonathan Molla** to develop custom Bluetooth
 | Design tools | KiCad, STM32CubeMX, LTspice |
 | Simulation scope | Simplified analog coupling and voltage-gain models |
 
-## Start here
+## Explore the project
 
-- **See the design:** [schematic previews](docs/schematics/) and [PCB previews](docs/images/).
-- **Understand the engineering:** [architecture and design decisions](docs/design.md).
-- **Review the evidence:** [validation status and next tests](docs/validation.md).
-- **Open the source:** [setup instructions](docs/getting-started.md).
-- **See what is next:** [roadmap](docs/roadmap.md).
-- **Inspect component lists:** [main board](hardware/main/bom.csv) and [power board](hardware/power/bom.csv). These are schematic-derived lists, not finalized purchasing BOMs.
+| What you want to see | Where to find it |
+| --- | --- |
+| **PCB layouts and editable board files** | [Main audio PCB](hardware/main/#main-audio-pcb) · [Charging and power PCB](hardware/power/#charging-and-power-pcb) |
+| **Schematics** | [Audio, controller, and charging circuit diagrams](docs/schematics/) |
+| **Board images** | [Main audio and power board previews](docs/images/) |
+| **Circuit design and component choices** | [Architecture and design decisions](docs/design.md) |
+| **STM32 configuration** | [Controller pin and peripheral configuration](firmware/) |
+| **Audio simulation** | [LTspice circuit, models, and run instructions](simulation/) |
+| **Component lists** | [Main audio board BOM](hardware/main/bom.csv) · [Power board BOM](hardware/power/bom.csv) |
+| **Engineering checks** | [Schematic and PCB check results](docs/validation.md) |
+| **Opening the design files** | [Software and setup guide](docs/getting-started.md) |
+| **Design deliverables** | [Project file guide](docs/roadmap.md) |
 
 ## System architecture
 
@@ -49,32 +53,28 @@ flowchart LR
 
 This is an architectural overview. Exact connections and component values are defined by the native schematics. The main/audio board and charging/power board are separate KiCad projects.
 
-## Engineering work represented
+## Engineering highlights
 
 - Hierarchical schematic organization for audio and MCU controls.
 - A separate charging and regulation PCB.
 - Project-local symbols and footprints alongside the native KiCad files.
-- Analog audio coupling modeled with explicit assumptions and limitations.
+- Stereo AC-coupling analysis with parameterized input resistance, gain, and driver loads.
 - STM32 pin and peripheral configuration captured in a reproducible `.ioc` file.
-- A validation plan that separates design checks, simulation, and future bench measurements.
+- Recorded KiCad electrical and design-rule checks with a structured measurement procedure.
 
 ## Repository layout
 
 ```text
 hardware/
-  main/          Main/audio PCB, hierarchical schematics and local libraries
-  power/         Charging/regulation PCB, schematic and local libraries
-firmware/        STM32CubeMX configuration and current implementation status
-simulation/      LTspice schematic, symbols, simplified models and instructions
+  main/          Main audio PCB, audio and controller schematics, local libraries
+  power/         Charging and power PCB, schematic and local libraries
+firmware/        STM32CubeMX controller configuration
+simulation/      LTspice audio circuit, symbols, models and instructions
 docs/
   images/        PCB layout previews
   schematics/    Browser-readable schematic exports
   checks/        Recorded KiCad design checks
 ```
-
-## Current limitations
-
-Board layout, design-rule review, firmware implementation, and physical validation remain part of the ongoing project. No measured battery runtime, output power, noise, distortion, acoustic response, or Bluetooth performance is claimed. Simulation models do not reproduce the full behavior of the BM83 or TPA6130A2.
 
 ## Author and references
 
