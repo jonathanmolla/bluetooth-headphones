@@ -1,32 +1,32 @@
-Reference,Value,Footprint,Datasheet,Status
-C15,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C16,10nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C17,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-C18,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C19,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C20,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C21,4.7uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-IC1,STM32U031C8T6,STM32:QFP50P900X900X160-48N,https://www.st.com/resource/en/datasheet/stm32u031f4.pdf,Schematic-derived; verify before purchasing
-J4,Cortex SWD,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical,,Schematic-derived; verify before purchasing
-R10,47k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
-R11,47k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
-SW1,Volume Up,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic-derived; verify before purchasing
-SW2,Volume Down,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic-derived; verify before purchasing
-SW3,Play/Pause,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic-derived; verify before purchasing
-C5,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C6,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C7,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C8,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-C9,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-C10,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-C11,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-C12,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic-derived; verify before purchasing
-C13,10uF,Capacitor_SMD:CP_Elec_4x5.8,,Schematic-derived; verify before purchasing
-C14,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic-derived; verify before purchasing
-J1,Headphones L / GND / R,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,Schematic-derived; verify before purchasing
-J5,From Power PCB,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,,Schematic-derived; verify before purchasing
-R5,4.7k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
-R6,4.7k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
-R7,100k,Resistor_SMD:R_0603_1608Metric,,Schematic-derived; verify before purchasing
-U3,BM83,RF_Module:Microchip_BM83,,Schematic-derived; verify before purchasing
-U4,TPA6130A2 (RTJ),Project_Audio:TPA6130A2_RTJ_4x4mm_P0.5mm_EP2.7x2.7mm,,Schematic-derived; verify before purchasing
+Reference,Value,Footprint,Datasheet,Source
+C15,100nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C16,10nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C17,1uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+C18,100nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C19,100nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C20,100nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C21,4.7uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+IC1,STM32U031C8T6,STM32:QFP50P900X900X160-48N,https://www.st.com/resource/en/datasheet/stm32u031f4.pdf,KiCad schematic
+J4,Cortex SWD,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical,,KiCad schematic
+R10,47k,Resistor_SMD:R_0603_1608Metric,,KiCad schematic
+R11,47k,Resistor_SMD:R_0603_1608Metric,,KiCad schematic
+SW1,Volume Up,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,KiCad schematic
+SW2,Volume Down,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,KiCad schematic
+SW3,Play/Pause,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,KiCad schematic
+C5,0.47uF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C6,0.47uF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C7,0.47uF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C8,0.47uF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+C9,1uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+C10,1uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+C11,1uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+C12,1uF,Capacitor_SMD:C_0805_2012Metric,,KiCad schematic
+C13,10uF,Capacitor_SMD:CP_Elec_4x5.8,,KiCad schematic
+C14,100nF,Capacitor_SMD:C_0603_1608Metric,,KiCad schematic
+J1,Headphones L / GND / R,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,KiCad schematic
+J5,From Power PCB,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,,KiCad schematic
+R5,4.7k,Resistor_SMD:R_0603_1608Metric,,KiCad schematic
+R6,4.7k,Resistor_SMD:R_0603_1608Metric,,KiCad schematic
+R7,100k,Resistor_SMD:R_0603_1608Metric,,KiCad schematic
+U3,BM83,RF_Module:Microchip_BM83,,KiCad schematic
+U4,TPA6130A2 (RTJ),Project_Audio:TPA6130A2_RTJ_4x4mm_P0.5mm_EP2.7x2.7mm,,KiCad schematic
