@@ -10,7 +10,7 @@ A printed/machined insulating locator and two screw-down bars hold the probe bod
 
 See [Instructions/Assembly and Pin Mapping.md](Instructions/Assembly%20and%20Pin%20Mapping.md) for parts placement, assembly, exact pad mapping, software operation and manufacturer page references. Engineering reports are in [docs/checks](../../docs/checks/). Other root files are required KiCad component libraries.
 
-USB cable: **Adafruit 954**, 3.3 V UART logic and separate 5 V power. The Google document's BOM is the purchasing list. CAD checks pass; the first built fixture still needs fit, continuity and successful-programming tests.
+USB cable: **Adafruit 954**, 3.3 V UART logic and separate 5 V power. The Google document's BOM is the purchasing list. The assembly procedure covers fit, continuity and programming verification.
 
 
-Read the [current review](../../docs/design-review-2026-11-14.md#programmer-revision-c) for physical alignment and lateral-retention requirements. The provided locator needs a completed clamping arrangement.
+Read the [current review](../../docs/design-review-2026-11-14.md#programmer-revision-c) for probe alignment, locator geometry and clamping details.

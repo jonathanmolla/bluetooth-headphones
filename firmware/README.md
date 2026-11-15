@@ -14,8 +14,16 @@
 - [Main audio board project](../hardware/main/)
 - [System architecture](../docs/design.md)
 
-## Hardware support and implementation status
+## Controller interface design
 
-The saved PCB provides SWDIO, SWCLK, NRST, ground and 3.0 V reference at J4. PA9/PA10 connect to BM83 RX/TX; PA4 controls reset (open drain), PA5 MFB wake and PA6 wake indication. PA3 controls amplifier enable, PB6/PB7 I2C, PA0–PA2 buttons and PA7 battery ADC.
+| Function | STM32 connection |
+| --- | --- |
+| SWD programming | PA13 SWDIO, PA14 SWCLK, NRST; J4 includes ground and 3.0 V reference |
+| BM83 UART | PA9 TX to module RX; PA10 RX from module TX |
+| BM83 reset | PA4, open-drain control |
+| BM83 wake / indication | PA5 MFB; PA6 indication |
+| Amplifier | PA3 enable; PB6/PB7 I2C |
+| Buttons | PA0–PA2 |
+| Battery sensing | PA7 ADC |
 
-Only CubeMX configuration is included. Review and generate peripheral initialization before implementing the application; the pin assignment alone is not a complete UART setup. Implement BM83 startup/ACK/retry timing, amp mute/gain sequencing, button timing and battery shutdown. Configure boot option bytes as needed through SWD. The separate BM83 configuration must select compatible Host mode and single-ended stereo audio. Final images and successful hardware execution remain pending.
+The control architecture covers BM83 startup and acknowledgement timing, reset/retry handling, amplifier mute/gain sequencing, button timing and battery shutdown. The BM83 interface uses Host mode and single-ended stereo audio. The STM32CubeMX source records the controller pin and peripheral configuration.

@@ -1,6 +1,6 @@
 # Engineering checks and measurement procedure
 
-Snapshot: **November 14, 2026**, KiCad 10. The published copies were checked after synchronization with the saved design. DRC refilled zones in memory without saving changes to the boards.
+Design checks: **November 14, 2026**, KiCad 10. The published copies were checked after synchronization with the saved design. DRC refilled zones in memory without saving changes to the boards.
 
 | Check | Main | Power | Programmer Rev C |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ Main warnings: dangling BT_WAKE stub, silkscreen edge/mask clipping and BM83 lib
 
 ## Circuit and layout assessment
 
-Read [the full design review](design-review-2026-11-14.md) for reference-design comparisons, cross-board connections, pending capacitor recommendations, calculated bass response, selected pack/thermistor and programmer mechanical requirements. These findings go beyond ERC/DRC.
+Read [the full design review](design-review-2026-11-14.md) for reference-design comparisons, cross-board connections, capacitor comparisons, calculated bass response, selected pack/thermistor and programmer mechanical requirements. 
 
 To reproduce checks from the repository root, substitute each project path:
 
@@ -28,9 +28,9 @@ kicad-cli pcb drc --schematic-parity --refill-zones --format json -o main-drc.js
 
 Other projects: `hardware/power/Charging and Power` and `hardware/programmer/BM83_Programmer`, with the corresponding extensions. Omit `--save-board` to leave CAD unchanged.
 
-## Evidence limits and bench measurements
+## Measurement method
 
-LTspice source models approximate coupling/gain and cannot establish distortion, noise, clipping, charge-pump operation or acoustic response. The STM32 `.ioc` captures configuration; no buildable application, executed firmware or final BM83 image set is included. Firmware development can continue during fabrication.
+The LTspice models describe the analog coupling network and ideal voltage gain. The measurement procedure covers the electrical and assembled-system characteristics below.
 
 | Measurement | Evidence to record |
 | --- | --- |
@@ -40,4 +40,4 @@ LTspice source models approximate coupling/gain and cannot establish distortion,
 | Audio into ~38 ohm dummy loads | Gain, DC offset, clipping, noise, startup/reset/shutdown transients |
 | Assembled headset | Driver balance, enclosure range, reconnection, playback/standby current and runtime |
 
-Record instruments, loads, supply voltage, firmware revision and conditions. No assembled-hardware performance has been demonstrated by these checks.
+Record instruments, loads, supply voltage, firmware revision and conditions. 

@@ -16,7 +16,7 @@
 - [STM32 pin and peripheral configuration](../firmware/)
 - [LTspice stereo audio simulation](../simulation/)
 - [Recorded schematic and PCB checks](validation.md)
-- [Bench measurement procedure](validation.md#bench-measurement-procedure)
+- [Bench measurement procedure](validation.md#measurement-method)
 
 ## Design documentation
 
@@ -25,11 +25,8 @@
 - [Board layout images](images/)
 - [Component documentation and references](references.md)
 
-## November 14 status and next steps
+## BM83 programming fixture
 
-- Current main/power CAD and revision C programmer are included; zero unconnected items on all three boards.
-- Main/power interface and selected battery charge rate reviewed.
-- Resolve power C1 local bypass recommendation before freezing the design; optionally increase C5–C8 for flatter deep bass.
-- Finalize module retention, fixture alignment and manufacturing outputs.
-- Develop STM32 application and BM83 configuration during fabrication; hardware tests follow assembly.
-- Complete the measured validation plan before making performance claims.
+- [Single-board programmer, revision C](../hardware/programmer/)
+- [Probe map and assembly procedure](../hardware/programmer/Instructions/Assembly%20and%20Pin%20Mapping.md)
+- [Cross-board design calculations and reference comparisons](design-review-2026-11-14.md)

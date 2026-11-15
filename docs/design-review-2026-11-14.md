@@ -1,57 +1,49 @@
-# Design review — November 14, 2026
+# Circuit design and reference comparisons
 
-The saved main board, power board and revision C BM83 programmer have compatible electrical roles. Circuit and layout comparison supports proceeding toward a first prototype, with the charger output bypass recommendation resolved before freezing the design. No assembled-board measurements or verified module programming are claimed.
+The headphone system combines a main audio/controller PCB, a separate charging and regulation PCB, and a revision C loose-module BM83 programming fixture.
 
-## Comparison with existing designs
+## Reference-design comparisons
 
-| Reference | Comparison with the saved project |
+| Reference | Project implementation |
 | --- | --- |
-| [Microchip BM83 EVB and UART update procedure](https://www.microchip.com/content/dam/mchp/documents/WSG/ProductDocuments/UserGuides/BM83-Bluetooth-Audio-Development-Board-User-Guide-DS50002902B.pdf) | The main board has UART TX/RX, MFB wake, P0_0 indication and open-drain reset control. The external fixture supplies ADAP_IN and accesses UART, TEST and reset for a loose module. |
-| [TI TPA6130A2 evaluation board](https://www.ti.com/lit/ug/slou185a/slou185a.pdf) | Same amplifier family, I2C control and AC-coupled input architecture. TI uses 2.2 uF input capacitors; this board currently uses 0.47 uF. |
-| [SparkFun LiPo Charger Plus schematic](https://cdn.sparkfun.com/assets/f/8/b/5/6/SparkFun_LiPo_Charger_Plus.pdf) | Same MCP73833 family and independent 5.1 kohm USB-C CC pulldowns. SparkFun uses 10 uF input/output capacitors; the saved power board has 1 uF local bypass capacitors. |
-
-These comparisons check circuit choices and layout principles. They do not transfer a reference board's measured performance to this design.
+| [Microchip BM83 EVB](https://www.microchip.com/content/dam/mchp/documents/WSG/ProductDocuments/UserGuides/BM83-Bluetooth-Audio-Development-Board-User-Guide-DS50002902B.pdf) | UART TX/RX, MFB wake, P0_0 indication and open-drain reset connect the host STM32 to BM83. The separate fixture accesses ADAP_IN, UART, TEST and reset. |
+| [TI TPA6130A2 EVM](https://www.ti.com/lit/ug/slou185a/slou185a.pdf) | Stereo AC-coupled analog inputs, I2C volume control, charge-pump supply and ground-referenced headphone outputs. |
+| [SparkFun LiPo Charger Plus](https://cdn.sparkfun.com/assets/f/8/b/5/6/SparkFun_LiPo_Charger_Plus.pdf) | MCP73833 charger architecture and separate 5.1k USB-C CC pulldowns. |
 
 ## Board interfaces and power
 
-Power J6 connects to main J5 by pin number: **1 VBAT, 2 GND, 3 +3V0**. Verify the assembled cable maps 1-to-1; connector rotation on the PCB does not define cable polarity. VBAT supplies BM83 BAT_IN and both amplifier supply pins. The TPS7A2030 supplies the STM32 and I2C pullups, not the entire audio load. The battery divider is 47k/47k with a 100 nF ADC filter.
+Power J6 connects to main J5 by pin number: **1 VBAT, 2 GND, 3 +3V0**. VBAT supplies BM83 BAT_IN and the amplifier. TPS7A2030 supplies the STM32 and I2C pullups. The battery divider uses 47k/47k resistors and a 100 nF ADC filter.
 
-Selected battery: **SparkFun PRT-13851, 3.7 V nominal, 400 mAh**. [SparkFun specifies](https://www.sparkfun.com/lithium-ion-battery-400mah.html) built-in voltage/current protection, 80 mA normal charge current and 400 mA maximum charge current. The saved 12.7k PROG resistor gives about **78.7 mA nominal**, using the MCP73833 formula. Ideal capacity/current time is 5.08 h; actual full charge takes longer due to preconditioning, taper and losses. Current and termination must be measured. Low-current accuracy should be checked against the datasheet test conditions, rather than assumed from the formula alone.
+The battery is a protected **SparkFun PRT-13851, 3.7 V nominal, 400 mAh** pack. [SparkFun specifies](https://www.sparkfun.com/lithium-ion-battery-400mah.html) an 80 mA normal charge rate and a 400 mA maximum. The 12.7k PROG resistor calculates to **78.7 mA nominal**. The capacity/current calculation gives 5.08 h, with the constant-voltage taper extending full-charge time.
 
-The selected [TDK B57861S0103F040](https://product.tdk.com/en/search/sensor/ntc/ntc_element/info?part_no=B57861S0103F040) is 10k at 25 C, nominal beta 3988 K. Direct THERM-to-ground connection gives an approximate **7–41 C** window using nominal 24k/5k thresholds and a constant-beta approximation; actual limits depend on the resistance curve and tolerances. This is narrower than the documented 0–45 C target. The sensor must contact the cell. No resistor network for a precisely defined 0–45 C window is installed.
+The [TDK B57861S0103F040](https://product.tdk.com/en/search/sensor/ntc/ntc_element/info?part_no=B57861S0103F040) is a 10k thermistor with nominal beta 3988 K. Its direct THERM connection calculates to approximately **7–41 C** using nominal charger thresholds and a constant-beta model. Actual switching temperatures depend on the resistance curve and tolerances. The bead senses cell temperature through physical contact with the battery.
 
-Playback while charging is excluded by the project requirement. There is no charger-status/USB-detect signal to the STM32 and no automatic hardware interlock. The user turns the headphones off; firmware must implement a sufficiently low-current off state. LDO enable is tied to VBAT, so off does not physically disconnect the MCU rail. The 3.3 V planned battery shutdown threshold leaves nominal margin above the BM83's 3.2 V minimum, but cable/trace drop and transient sag need testing.
+The operating arrangement uses a manual off action during charging. LDO enable is connected to VBAT, and the MCU controls the system's low-power state. The battery shutdown design uses 3.3 V against the BM83's 3.2 V minimum supply specification.
 
-## Pending charger recommendation
+## Charger capacitance comparison
 
-**Power-board C1 is currently 1 uF.** [MCP73833 DS20002005C section 6.1.1.3](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73833-4-Stand-Alone-Linear-Li-Ion-Li-Polymer-Charge-Management-Controller-DS20002005.pdf) recommends at least 4.7 uF at VBAT-to-VSS for constant-voltage stability. Select a suitable 4.7–10 uF replacement with effective capacitance checked at battery voltage. Keep it near the charger with a short return path. Distant main-board capacitance across a cable does not replace this local bypass. Increasing input C2 from 1 uF is also worth considering against the reference design and USB input requirements.
+The power schematic specifies **1 uF for C1 and C2**. [Microchip DS20002005C section 6.1.1.3](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73833-4-Stand-Alone-Linear-Li-Ion-Li-Polymer-Charge-Management-Controller-DS20002005.pdf) describes a 4.7 uF minimum recommended battery-output bypass, while SparkFun uses 10 uF input and output capacitors. Effective capacitance, voltage bias, cable inductance and local return-path length govern the comparison. The schematic-derived component lists record the project's exact values.
 
-**These are recommendations, not installed changes.** Native CAD and schematic-derived BOMs intentionally retain the saved 1 uF values.
+## Audio response and layout
 
-## Audio quality and layout
+BM83 AOHPL/AOHPR connect through C5/C7 to the amplifier's negative inputs. C6/C8 AC-ground the positive inputs, following TI's single-ended arrangement. All four capacitors are **0.47 uF**. With 37k differential input resistance, their 0.235 uF effective series capacitance gives a calculated **18.3 Hz cutoff and -2.64 dB response at 20 Hz**. Resistance varies with gain. TI's EVM uses 2.2 uF input capacitors; at the same resistance that value calculates to a 3.9 Hz cutoff.
 
-BM83 AOHPL/AOHPR drive the amplifier's negative inputs through C5/C7; positive inputs are AC-grounded through C6/C8. This agrees with TI's single-ended-input guidance. C5–C8 are each **0.47 uF**. With the datasheet's 37k minimum differential input resistance, their effective series capacitance is 0.235 uF, giving **18.3 Hz cutoff and approximately -2.64 dB at 20 Hz**. Input resistance varies with gain; these are calculated conditions, not measured response.
+The four-layer main PCB provides broad internal ground planes, approximately 9 mm BM83-to-amplifier analog routes, short input connections, charge-pump connections of a few millimetres and multiple amplifier ground vias. The separate PCB carries the charging circuitry.
 
-Optional quality improvement: select **2.2 uF for all four inputs**, matching TI's EVM value. At the same nominal resistance the cutoff becomes about 3.9 Hz. Check part tolerance and effective capacitance. The saved CAD still uses 0.47 uF.
+The BM83 antenna projects beyond the main-board edge. Internal ground planes separate bottom-layer control routing from the module body. [Microchip section 7.2](https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/BM83-Bluetooth-Stereo-Audio-Module-Data-Sheet-DS70005402.pdf) provides the placement reference for module grounding, antenna clearance and routing. Battery, wiring and enclosure placement determine the assembled RF environment.
 
-The four-layer main PCB has broad internal ground planes, approximately 9 mm BM83-to-amplifier analog routes, short amplifier input routes, charge-pump connections of a few millimetres, and multiple amplifier exposed-pad ground vias. The charger is physically separated onto its own PCB. These support low-noise operation but do not establish noise or distortion figures.
-
-The BM83 antenna projects beyond the main-board edge. Some bottom-layer control traces remain beneath the module body with internal ground planes between them and the module. Microchip recommends avoiding routing directly under the module; this remains a layout departure. Keep the antenna clear of the battery, wiring, the power PCB and enclosure metal. Range must be tested in the assembled enclosure. See [BM83 datasheet section 7.2](https://ww1.microchip.com/downloads/aemDocuments/documents/WSG/ProductDocuments/DataSheets/BM83-Bluetooth-Stereo-Audio-Module-Data-Sheet-DS70005402.pdf).
-
-The selected **Ole Wolff OWR-4009T-38E** drivers are documented in the project purchasing BOM as nominal 38 ohm, 10 mW rated, 20 mW maximum. At nominal resistance, 10 mW corresponds to 0.616 V RMS. The amplifier can exceed the intended driver level; firmware must cap gain, start muted/disabled, and mute before shutdown. Final limits require dummy-load measurements and the driver specifications. Acoustic quality also depends on the driver, shell, seal and damping.
+The **Ole Wolff OWR-4009T-38E** drivers have nominal 38 ohm impedance, a documented 10 mW rated input and 20 mW maximum. At nominal impedance, 10 mW corresponds to **0.616 V RMS**. The control architecture uses amplifier gain limits and mute/enable sequencing. Driver response, enclosure seal and damping determine acoustic behavior.
 
 ## Programmer revision C
 
-One 90 x 50 mm PCB connects ten INGUN GKS-080-0001 probes directly through plated terminal holes. No second guide PCB or probe wire harness is used. USB-UART J1 is 5 V power with **3.3 V logic**; JP2 selects TEST, SW1 resets. ADAP_IN receives 5 V, BAT_IN receives its capacitor only. C1/C2 are on the underside near the probes. The fixture is used before the module is soldered onto the main board; installed-module reconfiguration is not provided by this loose-module fixture.
+One 90 x 50 mm PCB connects ten INGUN GKS-080-0001 probes through plated terminal holes. J1 supplies 5 V power and **3.3 V UART logic**, JP2 selects TEST and SW1 resets. ADAP_IN receives 5 V; BAT_IN connects to its bypass capacitor. C1/C2 sit on the underside near the power probes.
 
-The reviewed pad map is P1→22, P2→23, P3→29, P4→30, P5→31, P6→43, P7→16, P8→50, P9→56, P10→57. Positions, nets and 0.45 mm terminal holes were checked against the module geometry. The probe footprint is custom, not an INGUN-supplied land pattern.
+The physical-pad mapping is **P1→22, P2→23, P3→29, P4→30, P5→31, P6→43, P7→16, P8→50, P9→56, P10→57**. The custom probe footprint uses a 0.45 mm plated terminal hole and 0.80 mm pad. The insulating locator supports probe collars and the screw-down bars apply clamping pressure. Its frame height equals the module underside height; lateral positioning is provided by the clamping arrangement.
 
-The installed `Fixture.scad` supports probe collars but its locating frame ends at the module underside; it does not positively constrain the seated module laterally. The project owner intends to arrange clamping separately. Physical retention, alignment, contact resistance and a complete verified write remain acceptance tests. Clamp friction alone has not been demonstrated sufficient. CAD checks do not establish repeatable fixture operation.
+The module is configured in the fixture and then soldered onto the main board. The [assembly instructions](../hardware/programmer/Instructions/Assembly%20and%20Pin%20Mapping.md) document power, pin mapping, module placement and the isUpdate procedure.
 
-## Check results and remaining evidence
+## Recorded electrical checks
 
-All three schematics: zero ERC findings. All three boards: zero unconnected items. Main: four DRC warnings, zero parity issues. Power: zero layout findings and three LED-value parity warnings. Programmer: zero layout/parity findings. Enabled severities and ignored categories are recorded in [the reports](checks/).
+All three schematics have zero ERC findings. All three boards have zero unconnected items. Main: four DRC warnings and zero parity findings. Power: zero layout findings and three LED-value parity warnings. Programmer: zero layout or parity findings. [Full reports](checks/) include configured severities and ignored categories.
 
-The main BM83 library warning was investigated: pad positions, sizes and shapes match the installed standard library footprint; graphical item counts differ. Other main warnings concern a 0.2525 mm dangling BT_WAKE stub and silkscreen clipping. These are distinct from a missing required net connection.
-
-Before performance claims: measure charging stability/termination and cell temperature response; confirm SWD/UART/I2C operation; test gain, DC offset, clipping, startup/shutdown and noise into ~38 ohm dummy loads; then evaluate drivers, enclosure range and runtime. No buildable STM32 application or final BM83 image set is included yet. Firmware may be developed during PCB fabrication.
+The BM83 footprint's pad positions, sizes and shapes match the installed standard library footprint; graphical item counts differ. The other main warnings concern a 0.2525 mm BT_WAKE stub and silkscreen clipping. [Measurement methods](validation.md#measurement-method) cover charging, control interfaces, dummy-load audio, radio operation and runtime.

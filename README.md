@@ -2,9 +2,19 @@
 
 Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together stereo audio circuit design, PCB layout, battery charging, STM32 controller configuration, and LTspice simulation.
 
-**Current snapshot: November 14, 2026.** Main and power boards plus a separate revision C BM83 programming fixture. Hardware measurements and application firmware remain pending. See the [circuit and layout review](docs/design-review-2026-11-14.md) for comparisons, component decisions and pending capacitor recommendations.
+## Main audio PCB
 
-![Main audio PCB layout](docs/images/main-board.svg)
+<a href="hardware/main/Bluetooth%20Headphones%20Project.kicad_pcb"><img src="docs/images/main-board.svg" alt="Main audio PCB — BM83, headphone amplifier and STM32 controller" width="1600"></a>
+
+[Main audio PCB source](hardware/main/) · [Audio and controller schematics](docs/schematics/main/)
+
+## Charging and power PCB
+
+<a href="hardware/power/Charging%20and%20Power.kicad_pcb"><img src="docs/images/power-board.svg" alt="Charging and power PCB — USB-C, MCP73833 charger and 3.0 V regulator" width="1600"></a>
+
+[Charging and power PCB source](hardware/power/) · [Charging circuit schematic](docs/schematics/power/Charging%20and%20Power.svg)
+
+<a href="hardware/power/Charging%20and%20Power.kicad_sch"><img src="docs/images/charging-circuit.svg" alt="Charging and power circuit schematic" width="1600"></a>
 
 ## Project at a glance
 

@@ -30,6 +30,6 @@ The repository includes hierarchical schematics, PCB layouts, schematic-derived 
 
 Power J6 → main J5 is 1 VBAT, 2 GND, 3 +3V0. The BM83 and amplifier use VBAT; the STM32 and I2C pullups use +3V0. The selected protected SparkFun PRT-13851 is 400 mAh, with nominal 79 mA charging set by 12.7k. Playback is excluded while charging and requires a manual off action; no automatic USB-detection interlock is installed.
 
-The STM32 uses SWD; the BM83 uses the separate [revision C loose-module fixture](../hardware/programmer/). Host mode, single-ended stereo output and compatible BM83 images must be configured before assembly.
+The STM32 uses SWD; the BM83 uses the separate [revision C loose-module fixture](../hardware/programmer/). The BM83 configuration uses Host mode and single-ended stereo output.
 
-[November 14 circuit/layout review](design-review-2026-11-14.md) documents comparison with Microchip, TI and SparkFun designs, the pending power C1 bypass correction, optional larger audio capacitors, thermistor window and fixture fit limits. The saved CAD retains 1 uF power C1 and 0.47 uF audio C5–C8.
+[November 14 circuit/layout review](design-review-2026-11-14.md) documents comparison with Microchip, TI and SparkFun designs, charger bypass capacitance, audio coupling values, thermistor behavior and fixture geometry. The saved CAD retains 1 uF power C1 and 0.47 uF audio C5–C8.

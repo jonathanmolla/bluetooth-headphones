@@ -15,4 +15,4 @@ For browser-readable circuit diagrams, see [schematic previews](../docs/schemati
 
 [BM83 programmer revision C](programmer/) configures the loose module before soldering it onto the main board. It is separate bench equipment.
 
-See [the current cross-board review](../docs/design-review-2026-11-14.md) for interconnects and pending component recommendations.
+See [the current cross-board review](../docs/design-review-2026-11-14.md) for interconnects, component calculations and reference-design comparisons.

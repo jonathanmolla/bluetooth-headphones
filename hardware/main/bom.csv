@@ -1,32 +1,32 @@
 Reference,Value,Footprint,Datasheet,Status
-C15,100nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C16,10nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C17,1uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-C18,100nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C19,100nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C20,100nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C21,4.7uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-IC1,STM32U031C8T6,STM32:QFP50P900X900X160-48N,https://www.st.com/resource/en/datasheet/stm32u031f4.pdf,Saved schematic value; see review for pending recommendations
-J4,Cortex SWD,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical,,Saved schematic value; see review for pending recommendations
-R10,47k,Resistor_SMD:R_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-R11,47k,Resistor_SMD:R_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-SW1,Volume Up,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Saved schematic value; see review for pending recommendations
-SW2,Volume Down,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Saved schematic value; see review for pending recommendations
-SW3,Play/Pause,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Saved schematic value; see review for pending recommendations
-C5,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C6,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C7,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C8,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-C9,1uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-C10,1uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-C11,1uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-C12,1uF,Capacitor_SMD:C_0805_2012Metric,,Saved schematic value; see review for pending recommendations
-C13,10uF,Capacitor_SMD:CP_Elec_4x5.8,,Saved schematic value; see review for pending recommendations
-C14,100nF,Capacitor_SMD:C_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-J1,Headphones L / GND / R,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,Saved schematic value; see review for pending recommendations
-J5,From Power PCB,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,,Saved schematic value; see review for pending recommendations
-R5,4.7k,Resistor_SMD:R_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-R6,4.7k,Resistor_SMD:R_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-R7,100k,Resistor_SMD:R_0603_1608Metric,,Saved schematic value; see review for pending recommendations
-U3,BM83,RF_Module:Microchip_BM83,,Saved schematic value; see review for pending recommendations
-U4,TPA6130A2 (RTJ),Project_Audio:TPA6130A2_RTJ_4x4mm_P0.5mm_EP2.7x2.7mm,,Saved schematic value; see review for pending recommendations
+C15,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C16,10nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C17,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+C18,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C19,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C20,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C21,4.7uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+IC1,STM32U031C8T6,STM32:QFP50P900X900X160-48N,https://www.st.com/resource/en/datasheet/stm32u031f4.pdf,Schematic component
+J4,Cortex SWD,Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical,,Schematic component
+R10,47k,Resistor_SMD:R_0603_1608Metric,,Schematic component
+R11,47k,Resistor_SMD:R_0603_1608Metric,,Schematic component
+SW1,Volume Up,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic component
+SW2,Volume Down,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic component
+SW3,Play/Pause,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x,,Schematic component
+C5,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C6,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C7,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C8,0.47uF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+C9,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+C10,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+C11,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+C12,1uF,Capacitor_SMD:C_0805_2012Metric,,Schematic component
+C13,10uF,Capacitor_SMD:CP_Elec_4x5.8,,Schematic component
+C14,100nF,Capacitor_SMD:C_0603_1608Metric,,Schematic component
+J1,Headphones L / GND / R,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,Schematic component
+J5,From Power PCB,Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,,Schematic component
+R5,4.7k,Resistor_SMD:R_0603_1608Metric,,Schematic component
+R6,4.7k,Resistor_SMD:R_0603_1608Metric,,Schematic component
+R7,100k,Resistor_SMD:R_0603_1608Metric,,Schematic component
+U3,BM83,RF_Module:Microchip_BM83,,Schematic component
+U4,TPA6130A2 (RTJ),Project_Audio:TPA6130A2_RTJ_4x4mm_P0.5mm_EP2.7x2.7mm,,Schematic component

@@ -27,4 +27,4 @@ This board brings together BM83 Bluetooth audio, the TPA6130A2 headphone amplifi
 
 ## November 14 review
 
-[Cross-board circuit and layout review](../../docs/design-review-2026-11-14.md) records the saved component values, inter-board pinout, battery/driver selection and pending recommendations. The CSV lists schematic parts; the existing Google document remains the purchasing BOM.
+[Cross-board circuit and layout review](../../docs/design-review-2026-11-14.md) records component values, inter-board pinout, battery/driver selection and reference-design comparisons. The CSV lists schematic parts; the existing Google document remains the purchasing BOM.
