@@ -2,6 +2,8 @@
 
 Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together stereo audio circuit design, PCB layout, battery charging, STM32 controller configuration, and LTspice simulation.
 
+**Current snapshot: November 14, 2026.** Main and power boards plus a separate revision C BM83 programming fixture. Hardware measurements and application firmware remain pending. See the [circuit and layout review](docs/design-review-2026-11-14.md) for comparisons, component decisions and pending capacitor recommendations.
+
 ![Main audio PCB layout](docs/images/main-board.svg)
 
 ## Project at a glance
@@ -12,6 +14,8 @@ Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together 
 | Headphone amplifier | TI TPA6130A2, with AC-coupled analog inputs |
 | Controller | STM32U031C8T6 configuration and MCU/button schematic |
 | Charging | MCP73833 circuit on a separate power PCB |
+| Battery / drivers | SparkFun PRT-13851 protected 400 mAh pack; Ole Wolff OWR-4009T-38E, nominal 38 ohm |
+| BM83 programming | Separate single-PCB spring-contact fixture, revision C |
 | Regulation | TPS7A2030PDBVR, fixed 3.0 V regulator |
 | Design tools | KiCad, STM32CubeMX, LTspice |
 | Simulation scope | Simplified analog coupling and voltage-gain models |
@@ -68,6 +72,7 @@ This is an architectural overview. Exact connections and component values are de
 hardware/
   main/          Main audio PCB, audio and controller schematics, local libraries
   power/         Charging and power PCB, schematic and local libraries
+  programmer/    Single-PCB BM83 fixture, probe footprints and assembly instructions
 firmware/        STM32CubeMX controller configuration
 simulation/      LTspice audio circuit, symbols, models and instructions
 docs/
@@ -81,3 +86,5 @@ docs/
 Project owner: [Jonathan Molla](https://github.com/jonathanmolla).
 
 See [references and third-party materials](docs/references.md) for component sources and [reuse information](NOTICE.md) before reusing the files.
+
+[BM83 programmer source and instructions](hardware/programmer/) · [Latest design review](docs/design-review-2026-11-14.md)

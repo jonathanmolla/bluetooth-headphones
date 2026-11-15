@@ -28,3 +28,7 @@ Open [simulation/Headphones_Audio.asc](../simulation/Headphones_Audio.asc) in LT
 ## Inspect component lists and checks
 
 Each board folder includes a `bom.csv` with schematic references, values, footprints and datasheet links. The [engineering check report](validation.md) links to the recorded ERC and DRC results and their reproduction commands.
+
+## BM83 programming fixture
+
+Open `hardware/programmer/BM83_Programmer.kicad_pro`. Read its [assembly instructions](../hardware/programmer/Instructions/Assembly%20and%20Pin%20Mapping.md) and the [review](design-review-2026-11-14.md) before building. Firmware is loaded onto the loose module before soldering it onto the main board. Manufacturer PDFs are linked; they are not bundled.

@@ -13,3 +13,5 @@ These previews show front copper, front silkscreen and the board outline. Open t
 ![Charging and power PCB layout](power-board.svg)
 
 [Open the charging and power board files](../../hardware/power/) · [Editable PCB layout](../../hardware/power/Charging%20and%20Power.kicad_pcb)
+
+[Revision C BM83 programmer layout](programmer-board.svg) · [Current review](../design-review-2026-11-14.md)

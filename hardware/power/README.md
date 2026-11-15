@@ -22,3 +22,7 @@ This board contains the USB power input, MCP73833 battery-charging circuit, and 
 ## Library files
 
 `MCP73833-AMI_UN.pretty/` and `TPS7A2030PDBVR.pretty/` contain the local charger and regulator CAD assets. Keep these folders and both library tables beside the project when downloading it.
+
+## November 14 review
+
+[Cross-board circuit and layout review](../../docs/design-review-2026-11-14.md) records the saved component values, inter-board pinout, battery/driver selection and pending recommendations. The CSV lists schematic parts; the existing Google document remains the purchasing BOM.

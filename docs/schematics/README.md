@@ -10,3 +10,5 @@ Browser-readable schematic exports from KiCad 10.0.3.
 | [Charging and power](power/Charging%20and%20Power.svg) | USB input, battery charging and regulation | [Power schematic](../../hardware/power/Charging%20and%20Power.kicad_sch) |
 
 Open or download an SVG to zoom into the circuit. [PCB layouts and project files](../../hardware/) are organized by board.
+
+[BM83 programmer revision C schematic](programmer/BM83_Programmer.svg)

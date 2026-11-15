@@ -1,0 +1,6 @@
+(fp_lib_table
+(lib (name "BM83_Programmer") (type "KiCad") (uri "${KIPRJMOD}/BM83_Programmer.pretty") (options "") (descr "Project local"))
+(lib (name "Button_Switch_THT") (type "KiCad") (uri "${KIPRJMOD}/Button_Switch_THT.pretty") (options "") (descr "Project local"))
+(lib (name "Capacitor_SMD") (type "KiCad") (uri "${KIPRJMOD}/Capacitor_SMD.pretty") (options "") (descr "Project local"))
+(lib (name "Connector_PinHeader_2.54mm") (type "KiCad") (uri "${KIPRJMOD}/Connector_PinHeader_2.54mm.pretty") (options "") (descr "Project local"))
+)

@@ -1,0 +1,886 @@
+(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "3410daf7-915b-46e1-872c-8d4fa63e2878") (paper "A4") (title_block (title "BM83 Single-PCB UART Programming Fixture") (rev "C - prototype") (comment 1 "Direct PCB probe terminals; Microchip DS70005402H pp44,46")) (lib_symbols (symbol "Connector_Generic:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Jumper:Jumper_2_Open"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "JP"
+			(at 0 2.794 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 0 -2.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Jumper SPST"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Jumper_2_Open_0_0"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Jumper_2_Open_0_1"
+			(arc
+				(start -1.524 1.27)
+				(mid 0 1.778)
+				(end 1.524 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Jumper_2_Open_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Switch:SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)(symbol "Connector:TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	))
+(symbol (lib_id "Connector_Generic:Conn_01x04") (at 43.18 45.72 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "57908dfe-97f1-49fa-bdf1-48b35757899e")(property "Reference" "J1" (at 48.26 38.1 0) (effects (font (size 1.016 1.016))))(property "Value" "USB-UART 3V3 LOGIC" (at 55.88 40.64 0) (effects (font (size 1.016 1.016))))(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 43.18 45.72 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://www.samtec.com/products/tsw-104-07-g-s" (at 43.18 45.72 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "TSW-104-07-G-S" (at 43.18 45.72 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "Samtec" (at 43.18 45.72 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "32dc5e5e-663e-4586-83f4-083d85ea3cf5"))(pin "2" (uuid "c3f2cd7b-a9ca-4fd7-9562-d31d874a9800"))(pin "3" (uuid "c390792b-9584-4b79-9063-e58f37c4aaf2"))(pin "4" (uuid "7d1aacae-90ce-4342-97bf-b8f206ab3c41"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "J1") (unit 1)))))
+(wire (pts (xy 38.1 43.18) (xy 30.48 43.18)) (stroke (width 0) (type default)) (uuid "caba320a-52d4-4c0c-9929-518e7a35737c"))
+(global_label "ADAP_5V" (shape bidirectional) (at 30.48 43.18 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "77106216-785e-4891-842a-cc11e19f4ea3"))
+(wire (pts (xy 38.1 45.72) (xy 30.48 45.72)) (stroke (width 0) (type default)) (uuid "512a2b4b-d61a-41bc-aeb3-8f5b0e89a29b"))
+(global_label "GND" (shape bidirectional) (at 30.48 45.72 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "cb4fc651-f062-48c2-a03e-83f485dd376e"))
+(wire (pts (xy 38.1 48.26) (xy 30.48 48.26)) (stroke (width 0) (type default)) (uuid "d1b9c8c3-a02f-4e51-8dea-6a1a6b03cbe1"))
+(global_label "UART_RX" (shape bidirectional) (at 30.48 48.26 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "ba5ad9f6-6354-48f1-9b76-aed011cf8a11"))
+(wire (pts (xy 38.1 50.8) (xy 30.48 50.8)) (stroke (width 0) (type default)) (uuid "6337f168-8ef4-4110-ac38-cfa54c90cc21"))
+(global_label "UART_TX" (shape bidirectional) (at 30.48 50.8 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "cea99630-05cf-4359-863f-e03e0acfcf44"))
+(symbol (lib_id "Jumper:Jumper_2_Open") (at 91.44 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4a260769-d60d-4d3c-b710-bd65c1a89e8c")(property "Reference" "JP2" (at 91.44 58.42 0) (effects (font (size 1.016 1.016))))(property "Value" "TEST MODE" (at 91.44 60.96 0) (effects (font (size 1.016 1.016))))(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 91.44 63.5 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://www.samtec.com/products/tsw-102-07-g-s" (at 91.44 63.5 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "TSW-102-07-G-S" (at 91.44 63.5 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "Samtec" (at 91.44 63.5 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "8f520e4b-6a21-405e-be26-cee41822b9e1"))(pin "2" (uuid "c272fad0-68e4-4960-ba16-a20d924d3612"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "JP2") (unit 1)))))
+(wire (pts (xy 86.36 63.5) (xy 78.74 63.5)) (stroke (width 0) (type default)) (uuid "2fbae5f0-cfaa-485a-9496-7f98aaf025de"))
+(global_label "TEST" (shape bidirectional) (at 78.74 63.5 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "5b4e2a58-4ea8-4340-92d8-dca33ddb2527"))
+(wire (pts (xy 96.52 63.5) (xy 104.14 63.5)) (stroke (width 0) (type default)) (uuid "5f21ff8f-339b-4004-9717-ad74d2b48802"))
+(global_label "GND" (shape bidirectional) (at 104.14 63.5 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "b965407b-6a1b-4f25-83b5-6dd118746a71"))
+(symbol (lib_id "Switch:SW_Push") (at 91.44 86.36 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "57b5b37d-41a3-4e8d-8568-4cea86a88b94")(property "Reference" "SW1" (at 91.44 81.28 0) (effects (font (size 1.016 1.016))))(property "Value" "RESET" (at 91.44 83.82 0) (effects (font (size 1.016 1.016))))(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm" (at 91.44 86.36 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf" (at 91.44 86.36 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "B3F-1000" (at 91.44 86.36 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "Omron / Aratas" (at 91.44 86.36 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "b4d6ff00-0ffe-45d1-89e6-8ce14a946183"))(pin "2" (uuid "e243ea7a-51b9-4196-8e6f-fa9d31815fcb"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "SW1") (unit 1)))))
+(wire (pts (xy 86.36 86.36) (xy 78.74 86.36)) (stroke (width 0) (type default)) (uuid "b96c80f0-7c5f-4fd9-befb-11f76eca39ec"))
+(global_label "RESET_N" (shape bidirectional) (at 78.74 86.36 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "864a95a1-ecdc-433d-983e-1250018e5de7"))
+(wire (pts (xy 96.52 86.36) (xy 104.14 86.36)) (stroke (width 0) (type default)) (uuid "6f8b4c5d-10ee-462f-8a36-dcfbdc9c2841"))
+(global_label "GND" (shape bidirectional) (at 104.14 86.36 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "2d918437-6101-4737-b963-a274e07e9e15"))
+(symbol (lib_id "Device:C") (at 40.64 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c0d18e43-2b50-4b1e-8769-d5b820485028")(property "Reference" "C1" (at 49.53 100.33 0) (effects (font (size 1.016 1.016))))(property "Value" "1uF / 25V X7R" (at 53.34 102.87 0) (effects (font (size 1.016 1.016))))(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 40.64 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM219R71E105KA88D" (at 40.64 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GRM219R71E105KA88D" (at 40.64 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "Murata" (at 40.64 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "51ad1238-573f-4235-9d3a-bb9b23fcd90a"))(pin "2" (uuid "2938c22c-f7ba-47f3-b0e0-2fe69c878343"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "C1") (unit 1)))))
+(wire (pts (xy 40.64 97.79) (xy 33.02 97.79)) (stroke (width 0) (type default)) (uuid "287e0e6b-a97d-4e91-ad08-19601a4e7420"))
+(global_label "ADAP_5V" (shape bidirectional) (at 33.02 97.79 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "d31c77bc-07c5-4563-909e-7a25f676d6d3"))
+(wire (pts (xy 40.64 105.41) (xy 33.02 105.41)) (stroke (width 0) (type default)) (uuid "b0093270-1fa6-488b-bf7c-96e360c23d8a"))
+(global_label "GND" (shape bidirectional) (at 33.02 105.41 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7d179fed-19a3-477e-bd5e-ee6ffc7ae452"))
+(symbol (lib_id "Device:C") (at 139.7 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1399a33f-e31c-4cbf-b529-8d53ec96cce8")(property "Reference" "C2" (at 148.59 100.33 0) (effects (font (size 1.016 1.016))))(property "Value" "1uF / 25V X7R" (at 152.4 102.87 0) (effects (font (size 1.016 1.016))))(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 139.7 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM219R71E105KA88D" (at 139.7 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GRM219R71E105KA88D" (at 139.7 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "Murata" (at 139.7 101.6 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "5b7d6206-2dd8-4ea1-bce2-4344151828a8"))(pin "2" (uuid "7542e7c7-c8e1-4697-801a-2b21cba74f63"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "C2") (unit 1)))))
+(wire (pts (xy 139.7 97.79) (xy 132.08 97.79)) (stroke (width 0) (type default)) (uuid "a43add28-5bd2-48b6-b42c-286f7fbb6761"))
+(global_label "BAT_CAP_ONLY" (shape bidirectional) (at 132.08 97.79 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "86815e7a-7251-40c9-97f5-a2f4f61d8415"))
+(wire (pts (xy 139.7 105.41) (xy 132.08 105.41)) (stroke (width 0) (type default)) (uuid "f97e2656-2a20-434d-8286-05d2a2097f22"))
+(global_label "GND" (shape bidirectional) (at 132.08 105.41 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "b9e73143-8a04-4784-8acf-7c07f05efa74"))
+(symbol (lib_id "Connector:TestPoint") (at 175.26 38.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4698ac9a-f1a7-4186-aeb1-6c788e33bcfd")(property "Reference" "P1" (at 175.26 33.02 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 22" (at 187.96 35.56 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 175.26 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 175.26 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 175.26 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 175.26 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 22; Test-mode mapping, not application GPIO remap" (at 175.26 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "570d93d1-9a72-4c95-8cca-dd1447fba793"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P1") (unit 1)))))
+(wire (pts (xy 175.26 38.1) (xy 167.64 38.1)) (stroke (width 0) (type default)) (uuid "b2d891d3-828c-4ada-b981-bcd355af0903"))
+(global_label "ADAP_5V" (shape bidirectional) (at 167.64 38.1 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "437f88df-d890-42cc-8684-7af96d3a5980"))
+(symbol (lib_id "Connector:TestPoint") (at 175.26 53.34 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4c62d458-35a2-4c4c-acd0-16ef97a9535b")(property "Reference" "P2" (at 175.26 48.26 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 23" (at 187.96 50.8 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 175.26 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 175.26 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 175.26 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 175.26 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 23; Test-mode mapping, not application GPIO remap" (at 175.26 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "d2423111-1991-4eef-be56-67785cee86af"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P2") (unit 1)))))
+(wire (pts (xy 175.26 53.34) (xy 167.64 53.34)) (stroke (width 0) (type default)) (uuid "1c42bdc8-793f-4a45-a802-ad8a85764690"))
+(global_label "BAT_CAP_ONLY" (shape bidirectional) (at 167.64 53.34 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7bd90659-b5bd-4cec-9666-80ea17b7ba3f"))
+(symbol (lib_id "Connector:TestPoint") (at 175.26 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "e62b0462-4b7f-4666-a69e-c39334bbc766")(property "Reference" "P3" (at 175.26 63.5 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 29" (at 187.96 66.04 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 175.26 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 175.26 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 175.26 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 175.26 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 29; Test-mode mapping, not application GPIO remap" (at 175.26 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "5d3fe2a9-82e9-4de0-a128-9f6fed006458"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P3") (unit 1)))))
+(wire (pts (xy 175.26 68.58) (xy 167.64 68.58)) (stroke (width 0) (type default)) (uuid "ead5cdf2-30ac-4b43-9d12-847622c3a994"))
+(global_label "UART_RX" (shape bidirectional) (at 167.64 68.58 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "91eace00-5c9f-44f1-b316-cd941422a230"))
+(symbol (lib_id "Connector:TestPoint") (at 175.26 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fecd5728-7684-4c5b-83c7-7b27f3ee7ca6")(property "Reference" "P4" (at 175.26 78.74 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 30" (at 187.96 81.28 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 175.26 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 175.26 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 175.26 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 175.26 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 30; Test-mode mapping, not application GPIO remap" (at 175.26 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "e19b7eca-9c2d-449b-a147-facbc6232429"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P4") (unit 1)))))
+(wire (pts (xy 175.26 83.82) (xy 167.64 83.82)) (stroke (width 0) (type default)) (uuid "3f87c3f4-803b-4517-9d58-373a3aca90a6"))
+(global_label "UART_TX" (shape bidirectional) (at 167.64 83.82 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "21e204c4-4809-4119-96de-9f3646efb119"))
+(symbol (lib_id "Connector:TestPoint") (at 175.26 99.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "4ab72605-db98-4ddd-afd3-3d663dfc443b")(property "Reference" "P5" (at 175.26 93.98 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 31" (at 187.96 96.52 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 175.26 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 175.26 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 175.26 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 175.26 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 31; Test-mode mapping, not application GPIO remap" (at 175.26 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "83c21d6a-1814-4fa5-aef4-b003d6d7b1f7"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P5") (unit 1)))))
+(wire (pts (xy 175.26 99.06) (xy 167.64 99.06)) (stroke (width 0) (type default)) (uuid "0cafaec4-0981-4ec1-87b9-f260cfe92837"))
+(global_label "TEST" (shape bidirectional) (at 167.64 99.06 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "3f8bba4b-53d1-4035-a36c-86a2c0a4c2e3"))
+(symbol (lib_id "Connector:TestPoint") (at 243.84 38.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ca47fd1c-8b27-4c51-b58a-189d5d9a3c21")(property "Reference" "P6" (at 243.84 33.02 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 43" (at 256.54 35.56 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 243.84 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 243.84 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 243.84 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 243.84 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 43; Test-mode mapping, not application GPIO remap" (at 243.84 38.1 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "5e70238f-6048-4e83-9eea-2ccd0f568282"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P6") (unit 1)))))
+(wire (pts (xy 243.84 38.1) (xy 236.22 38.1)) (stroke (width 0) (type default)) (uuid "c2b688ad-8886-4500-99f1-486762386708"))
+(global_label "RESET_N" (shape bidirectional) (at 236.22 38.1 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "e4d57434-2202-4ecc-b8ea-c040b3724503"))
+(symbol (lib_id "Connector:TestPoint") (at 243.84 53.34 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c4f139cd-10c6-4fd9-af24-4784b70d57a6")(property "Reference" "P7" (at 243.84 48.26 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 16" (at 256.54 50.8 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 243.84 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 243.84 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 243.84 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 243.84 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 16; Test-mode mapping, not application GPIO remap" (at 243.84 53.34 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "a4208b29-3fb1-4a5a-a892-7dea4372d7c2"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P7") (unit 1)))))
+(wire (pts (xy 243.84 53.34) (xy 236.22 53.34)) (stroke (width 0) (type default)) (uuid "699ca329-bba1-4829-9aa0-cd81f124a095"))
+(global_label "GND" (shape bidirectional) (at 236.22 53.34 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "90cffa29-576e-46f2-8f70-758a17489ff0"))
+(symbol (lib_id "Connector:TestPoint") (at 243.84 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "d187bb25-63e0-4a51-86cf-0016f3416806")(property "Reference" "P8" (at 243.84 63.5 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 50" (at 256.54 66.04 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 243.84 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 243.84 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 243.84 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 243.84 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 50; Test-mode mapping, not application GPIO remap" (at 243.84 68.58 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "893a9ad3-2f63-4bb2-a160-bfd06cc6403e"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P8") (unit 1)))))
+(wire (pts (xy 243.84 68.58) (xy 236.22 68.58)) (stroke (width 0) (type default)) (uuid "22be237a-eb49-4472-bdad-a363ea2196c5"))
+(global_label "GND" (shape bidirectional) (at 236.22 68.58 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "1466327f-6b2b-47a8-aa99-a632802158c2"))
+(symbol (lib_id "Connector:TestPoint") (at 243.84 83.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9b980736-3ea1-4ca6-b885-fd67dfb99a4f")(property "Reference" "P9" (at 243.84 78.74 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 56" (at 256.54 81.28 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 243.84 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 243.84 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 243.84 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 243.84 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 56; Test-mode mapping, not application GPIO remap" (at 243.84 83.82 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "f45e0e61-9233-4bb9-9bb4-a68ecb6f71f5"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P9") (unit 1)))))
+(wire (pts (xy 243.84 83.82) (xy 236.22 83.82)) (stroke (width 0) (type default)) (uuid "4e77b19f-d1da-45df-86c2-6a061af82dfe"))
+(global_label "GND" (shape bidirectional) (at 236.22 83.82 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "5a716df5-8607-4c9b-ba4b-1340f44f955e"))
+(symbol (lib_id "Connector:TestPoint") (at 243.84 99.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "947f5b51-ff5c-451a-a64c-c84e388ec89c")(property "Reference" "P10" (at 243.84 93.98 0) (effects (font (size 1.016 1.016))))(property "Value" "BM83 PAD 57" (at 256.54 96.52 0) (effects (font (size 1.016 1.016))))(property "Footprint" "BM83_Programmer:TestPoint_INGUN_GKS080_SolderTail" (at 243.84 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Datasheet" "https://ingun.com/media/01/86/fe/1752238559/INGUN_GKS-080_301_035_A_0805_GKS-080-0001_EN_Datasheet.pdf?ts=1774801120" (at 243.84 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "MPN" "GKS-080-0001" (at 243.84 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Manufacturer" "INGUN" (at 243.84 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(property "Purpose" "Direct pressure contact to BM83 physical pad 57; Test-mode mapping, not application GPIO remap" (at 243.84 99.06 0) (hide yes) (effects (font (size 1.016 1.016))))(pin "1" (uuid "f17ed7be-c70b-4418-b576-a54159a4c25f"))(instances (project "BM83_Programmer" (path "/3410daf7-915b-46e1-872c-8d4fa63e2878" (reference "P10") (unit 1)))))
+(wire (pts (xy 243.84 99.06) (xy 236.22 99.06)) (stroke (width 0) (type default)) (uuid "1b835df4-15e6-4dff-9f70-defb664bbea8"))
+(global_label "GND" (shape bidirectional) (at 236.22 99.06 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "6f160976-7e50-480d-a56f-8b30045923b6"))
+(text "BM83 PROGRAMMER - REV C / ONE PCB" (at 20.32 17.78 0) (effects (font (size 1.778 1.778)) (justify left top)) (uuid "42e7f661-265c-4d7a-9e5b-0525721d8b1d"))
+(text "J1 CABLE / Adafruit 954\n1 RED +5V power; 2 BLACK ground\n3 GREEN adapter TX -> BM83 RX29\n4 WHITE adapter RX <- BM83 TX30\n3.3V UART logic. No 5V signal drive." (at 20.32 120.65 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "c97a6110-da55-4229-a62d-4e9b1b86ef61"))
+(text "J1 pin1 directly supplies ADAP_IN. JP2: Test mode.\nSW1 grounds RESET_N; internal pull-up.\nC2 is BAT_IN bypass ONLY; never connect USB 5V to BAT_IN.\nSYS_PWR, VDD_IO and USB D+/D- are not contacted.\nNo J2 / no wiring harness / no separate probe PCB." (at 91.44 120.65 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "4b2e28f0-13ae-4e1a-8ae7-700412a49aca"))
+(text "P1-P10 ARE DIRECT PCB-MOUNTED PROBES\nElectrical terminal: 0.30mm solder tail -> 0.45mm plated hole.\nCopper pad 0.80mm; 1.00mm adjacent contact pitch.\nPrinted locator supports 0.70mm barrels at their 0.80mm collars.\nNominal collar Z10.20; free tip Z20.50; module underside Z17.50.\n3.00mm working compression. Check actual fit/heights before use.\nNo solder on BM83. Do not solder probe barrel or upper plunger." (at 172.72 119.38 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "0d7b6490-cf34-4d56-8b52-f0d73e5a6c7d"))
+(text "PIN / PROGRAMMING REFERENCES - Microchip DS70005402H\nTable 2-2 pp13-15: pin identities. Fig 8-1 p56 / Fig 8-2 p57: pad regions.\nSec 6.3.1 / Table 6-1 p44: ADAP_IN 5V + P3_4 LOW during start/reset.\nSec 6.4 notes 2-3 p46: P3_4 boot selection; P8_5/P8_6 reserved for Flash download.\nSec 6.2 p43: RESET_N internal pull-up. Tables 9-2/9-3 p58: voltages.\nProgramming map is independent of normal application GPIO assignments.\nActual module firmware/configuration has not been read from hardware." (at 20.32 152.4 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "c012d847-7d60-4157-bbd0-c178bbd1cebc"))
+(text "PROBE / TOOL REFERENCES\nINGUN GKS-080-0001 drawing p1: 0.30mm lower terminal, 3mm long;\n0.70mm barrel / 0.80mm collar / 0.35mm tip / 22.30mm overall.\nDS50002902B Sec 5.1 / Table 5-1 p20: UART update / isUpdate 115200.\nFixture is custom; PCB hole/pad sizes are designed here, not a factory footprint.\nUnplug USB before module insertion/removal or changing JP2.\nPrototype requires alignment, continuity and verified write tests." (at 172.72 149.86 0) (effects (font (size 1.016 1.016)) (justify left top)) (uuid "e656a0a5-0e4a-48b5-9827-e34c0bc9bac7"))
+)

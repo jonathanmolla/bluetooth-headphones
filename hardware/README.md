@@ -10,3 +10,9 @@ The headphone electronics are organized into two KiCad board projects.
 Each board folder contains its editable `.kicad_pcb` layout, `.kicad_sch` schematic, `.kicad_pro` project, component list and project-local libraries. Open the `.kicad_pro` file to browse the complete board project in KiCad.
 
 For browser-readable circuit diagrams, see [schematic previews](../docs/schematics/). For recorded design checks, see [engineering check results](../docs/validation.md).
+
+## External programming fixture
+
+[BM83 programmer revision C](programmer/) configures the loose module before soldering it onto the main board. It is separate bench equipment.
+
+See [the current cross-board review](../docs/design-review-2026-11-14.md) for interconnects and pending component recommendations.

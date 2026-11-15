@@ -1,54 +1,43 @@
 # Engineering checks and measurement procedure
 
-The repository records KiCad **10.0.3** electrical-rule and PCB design-rule checks performed on **November 11, 2026**.
+Snapshot: **November 14, 2026**, KiCad 10. The published copies were checked after synchronization with the saved design. DRC refilled zones in memory without saving changes to the boards.
 
-## Recorded design checks
+| Check | Main | Power | Programmer Rev C |
+| --- | --- | --- | --- |
+| Schematic ERC findings | 0 | 0 | 0 |
+| PCB layout findings | 4 warnings | 0 | 0 |
+| Unconnected items | 0 | 0 | 0 |
+| Schematic parity | 0 | 3 warnings | 0 |
 
-| Check | Main audio board | Charging and power board |
-| --- | --- | --- |
-| Schematic ERC findings | 0 | 0 |
-| PCB layout-rule findings | 4 warnings | 0 |
-| PCB connectivity findings | 6 errors | 0 |
-| PCB/schematic parity findings | 0 | 3 warnings |
+Main warnings: dangling BT_WAKE stub, silkscreen edge/mask clipping and BM83 library mismatch. Pad geometry of BM83 matches the installed standard footprint; graphic count differs. Power parity warnings are D1/D2/D3 value labels. Reports record ignored checks and configured severities; zero findings alone does not establish circuit performance.
 
-The reports capture the project check configuration, severity levels, affected items and coordinates. PCB checks use the saved copper-zone fills. The `ignored_checks` field records rule categories excluded by the project configuration.
+- [Main ERC](checks/main-erc.json) and [DRC](checks/main-drc.json)
+- [Power ERC](checks/power-erc.json) and [DRC](checks/power-drc.json)
+- [Programmer ERC](checks/programmer-erc.json) and [DRC](checks/programmer-drc.json)
 
-### Full reports
+## Circuit and layout assessment
 
-- [Main audio board: schematic ERC](checks/main-erc.json)
-- [Main audio board: PCB DRC](checks/main-drc.json)
-- [Charging and power board: schematic ERC](checks/power-erc.json)
-- [Charging and power board: PCB DRC](checks/power-drc.json)
+Read [the full design review](design-review-2026-11-14.md) for reference-design comparisons, cross-board connections, pending capacitor recommendations, calculated bass response, selected pack/thermistor and programmer mechanical requirements. These findings go beyond ERC/DRC.
 
-### Reproduce the checks
-
-Run these commands from the repository root:
+To reproduce checks from the repository root, substitute each project path:
 
 ```sh
-kicad-cli sch erc --format json -o docs/checks/main-erc.json "hardware/main/Bluetooth Headphones Project.kicad_sch"
-kicad-cli pcb drc --schematic-parity --format json -o docs/checks/main-drc.json "hardware/main/Bluetooth Headphones Project.kicad_pcb"
-kicad-cli sch erc --format json -o docs/checks/power-erc.json "hardware/power/Charging and Power.kicad_sch"
-kicad-cli pcb drc --schematic-parity --format json -o docs/checks/power-drc.json "hardware/power/Charging and Power.kicad_pcb"
+kicad-cli sch erc --format json -o main-erc.json "hardware/main/Bluetooth Headphones Project.kicad_sch"
+kicad-cli pcb drc --schematic-parity --refill-zones --format json -o main-drc.json "hardware/main/Bluetooth Headphones Project.kicad_pcb"
 ```
 
-## Simulation workflow
+Other projects: `hardware/power/Charging and Power` and `hardware/programmer/BM83_Programmer`, with the corresponding extensions. Omit `--save-board` to leave CAD unchanged.
 
-The LTspice circuit provides parameterized transient and AC analysis of stereo audio coupling and voltage gain. The [simulation guide](../simulation/README.md) defines the source signals, input resistance, gain, loads and analysis directives.
+## Evidence limits and bench measurements
 
-## Bench measurement procedure
+LTspice source models approximate coupling/gain and cannot establish distortion, noise, clipping, charge-pump operation or acoustic response. The STM32 `.ioc` captures configuration; no buildable application, executed firmware or final BM83 image set is included. Firmware development can continue during fabrication.
 
-This procedure defines the measurements and evidence to collect for assembled-board evaluation.
-
-| Measurement | Record |
+| Measurement | Evidence to record |
 | --- | --- |
-| Power rails | Supply current, rail voltages, polarity and temperature |
-| Controller operation | Programming connection, clock/reset behavior and button inputs |
-| Control interfaces | BM83 communication and amplifier I2C transactions |
-| Audio gain | Input/output voltage, frequency and control setting |
-| DC offset | Output DC voltage with approximately 38 ohm dummy loads |
-| Clipping | Output waveform versus input level and supply voltage |
-| Startup/shutdown | Output transients and mute sequencing |
-| Stability | Oscilloscope traces under specified load conditions |
-| Battery operation | Cell specifications, charge behavior and operating current |
+| Power and charging | Rail voltages/current, charge current/termination, bypass stability, temperature and NTC cutoff |
+| Programmer | Alignment, retention, continuity while clamped and verified complete module write |
+| Controller | SWD, buttons, UART and amplifier I2C |
+| Audio into ~38 ohm dummy loads | Gain, DC offset, clipping, noise, startup/reset/shutdown transients |
+| Assembled headset | Driver balance, enclosure range, reconnection, playback/standby current and runtime |
 
-Record instrument settings, load, supply voltage and firmware revision alongside each measurement.
+Record instruments, loads, supply voltage, firmware revision and conditions. No assembled-hardware performance has been demonstrated by these checks.
