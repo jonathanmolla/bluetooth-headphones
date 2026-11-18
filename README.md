@@ -10,9 +10,9 @@ Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together 
 
 ## Charging and power PCB
 
-<a href="hardware/power/Charging%20and%20Power.kicad_pcb"><img src="docs/images/power-board-3d.png" alt="Charging and power PCB — USB-C, MCP73833 charger and 3.0 V regulator" width="1600"></a>
+<a href="hardware/power/Charging%20and%20Power.kicad_pcb"><img src="docs/images/power-board.svg" alt="Charging and power PCB — USB-C, MCP73833 charger and 3.0 V regulator" width="1600"></a>
 
-[Charging and power PCB source](hardware/power/) · [Front copper layout](docs/images/power-board.svg) · [Charging circuit schematic](docs/schematics/power/Charging%20and%20Power.svg)
+[Charging and power PCB source](hardware/power/) · [Charging circuit schematic](docs/schematics/power/Charging%20and%20Power.svg)
 
 <a href="hardware/power/Charging%20and%20Power.kicad_sch"><img src="docs/images/charging-circuit.svg" alt="Charging and power circuit schematic" width="1600"></a>
 
