@@ -10,9 +10,9 @@ Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together 
 
 ## Charging and power PCB
 
-<a href="hardware/power/Charging%20and%20Power.kicad_pcb"><img src="docs/images/power-board.svg" alt="Charging and power PCB — USB-C, MCP73833 charger and 3.0 V regulator" width="1600"></a>
+<a href="hardware/power/Charging%20and%20Power.kicad_pcb"><img src="docs/images/power-board-3d.png" alt="Charging and power PCB — USB-C, MCP73833 charger and 3.0 V regulator" width="1600"></a>
 
-[Charging and power PCB source](hardware/power/) · [Charging circuit schematic](docs/schematics/power/Charging%20and%20Power.svg)
+[Charging and power PCB source](hardware/power/) · [Front copper layout](docs/images/power-board.svg) · [Charging circuit schematic](docs/schematics/power/Charging%20and%20Power.svg)
 
 <a href="hardware/power/Charging%20and%20Power.kicad_sch"><img src="docs/images/charging-circuit.svg" alt="Charging and power circuit schematic" width="1600"></a>
 
@@ -22,7 +22,7 @@ Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together 
 | --- | --- |
 | Bluetooth audio | Microchip BM83 module in the KiCad audio schematic |
 | Headphone amplifier | TI TPA6130A2, with AC-coupled analog inputs |
-| Controller | STM32U031C8T6 configuration and MCU/button schematic |
+| Controller | STM32U031C8T6 firmware, BM83 UART, amplifier control, and battery monitoring |
 | Charging | MCP73833 circuit on a separate power PCB |
 | Battery / drivers | SparkFun PRT-13851 protected 400 mAh pack; Ole Wolff OWR-4009T-38E, nominal 38 ohm |
 | BM83 programming | Separate single-PCB spring-contact fixture, revision C |
@@ -38,7 +38,7 @@ Custom Bluetooth headphone electronics by **Jonathan Molla**, bringing together 
 | **Schematics** | [Audio, controller, and charging circuit diagrams](docs/schematics/) |
 | **Board images** | [Main audio and power board previews](docs/images/) |
 | **Circuit design and component choices** | [Architecture and design decisions](docs/design.md) |
-| **STM32 configuration** | [Controller pin and peripheral configuration](firmware/) |
+| **STM32 firmware** | [CubeIDE project, CubeMX configuration, and build instructions](firmware/) |
 | **Audio simulation** | [LTspice circuit, models, and run instructions](simulation/) |
 | **Component lists** | [Main audio board BOM](hardware/main/bom.csv) · [Power board BOM](hardware/power/bom.csv) |
 | **Engineering checks** | [Schematic and PCB check results](docs/validation.md) |
@@ -83,7 +83,7 @@ hardware/
   main/          Main audio PCB, audio and controller schematics, local libraries
   power/         Charging and power PCB, schematic and local libraries
   programmer/    Single-PCB BM83 fixture, probe footprints and assembly instructions
-firmware/        STM32CubeMX controller configuration
+firmware/        STM32CubeIDE project and CubeMX controller configuration
 simulation/      LTspice audio circuit, symbols, models and instructions
 docs/
   images/        PCB layout previews

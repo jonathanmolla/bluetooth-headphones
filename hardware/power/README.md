@@ -8,7 +8,7 @@ This board contains the USB power input, MCP73833 battery-charging circuit, and 
 
 **Open the complete KiCad project:** [Charging and Power.kicad_pro](Charging%20and%20Power.kicad_pro)
 
-**View the layout in your browser:** [Charging and power PCB preview](../../docs/images/power-board.svg)
+**View the board in your browser:** [3D assembly preview](../../docs/images/power-board-3d.png) · [Front copper layout](../../docs/images/power-board.svg)
 
 ## Schematic and component list
 
